@@ -1417,3 +1417,31 @@ main .recent-orders a{
     margin-top: 10px;
     cursor: pointer;
 }
+
+.export{
+    padding: 10px 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.reminders{
+    margin-top: 20vh;
+}
+
+button {
+
+
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  }
+  
+button:hover {
+
+    /* Apply pop up effect */
+    transform: translateY(-3px);
+  }
+  

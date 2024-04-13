@@ -190,31 +190,8 @@
 
             <div class="reminders">
                 <div class="header">
-                    <h2>Reminders</h2>
-                    <span class="material-icons-sharp">
-                        notifications_none
-                    </span>
+                    <h2>Report</h2>
                 </div>
-
-                <div class="notification">
-                    <div class="icon">
-                        <span class="material-icons-sharp">
-                            volume_up
-                        </span>
-                    </div>
-                    <div class="content">
-                        <div class="info">
-                            <h3>Workshop</h3>
-                            <small class="text_muted">
-                                08:00 AM - 12:00 PM
-                            </small>
-                        </div>
-                        <span class="material-icons-sharp">
-                            more_vert
-                        </span>
-                    </div>
-                </div>
-
                 <div class="notification deactive">
                     <div class="icon">
                         <span class="material-icons-sharp">
@@ -222,24 +199,10 @@
                         </span>
                     </div>
                     <div class="content">
-                        <div class="info">
-                            <h3>Workshop</h3>
-                            <small class="text_muted">
-                                08:00 AM - 12:00 PM
-                            </small>
-                        </div>
+                        <button id="export-button" class="export">Export to Excel</button>
                         <span class="material-icons-sharp">
                             more_vert
                         </span>
-                    </div>
-                </div>
-
-                <div class="notification add-reminder">
-                    <div>
-                        <span class="material-icons-sharp">
-                            add
-                        </span>
-                        <h3>Add Reminder</h3>
                     </div>
                 </div>
 
@@ -249,6 +212,32 @@
 
 
     </div>
+
+        <script src="xlsx.full.min.js"></script>
+        <script>
+            function exportToExcel() {
+                // Get the table element
+                const table = document.querySelector('table');
+    
+                // Create a new Excel file
+                const wb = XLSX.utils.book_new();
+    
+                // Convert the table to a worksheet
+                const ws = XLSX.utils.table_to_sheet(table);
+    
+                // Add the worksheet to the Excel file
+                XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+    
+                // Save the Excel file
+                XLSX.writeFile(wb, "table_data.xlsx");
+            }
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                // Attach the exportToExcel function to the export button click event
+                const exportButton = document.getElementById('export-button');
+                exportButton.addEventListener('click', exportToExcel);
+            });
+        </script>
 
     <script src="orders.js" type = "module"></script>
     <script src="admin.js"></script>
