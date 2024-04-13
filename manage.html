@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="manage.css">
+    <title>Manage</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <h2>BOOK4<span class="danger">COEP</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="dashboard.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="users.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Users</h3>
+                </a>
+
+                <a href="admin.html" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Tickets</h3>
+                    <span class="message-count">69</span>
+                </a>
+        
+                <a href="manage.html">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Manage</h3>
+                </a>
+                <a href="login.html">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+               
+            <div class="right-section">
+                <h1>Manage</h1>
+                <div class="nav">
+                    <button id="menu-btn">
+                        <span class="material-icons-sharp">
+                            menu
+                        </span>
+                    </button>
+                    <div class="dark-mode">
+                        <span class="material-icons-sharp active">
+                            light_mode
+                        </span>
+                        <span class="material-icons-sharp">
+                            dark_mode
+                        </span>
+                    </div>
+    
+                    <div class="profile">
+                        <div class="info">
+                            <p>Hey, <b>Vedant</b></p>
+                            <small class="text-muted">Admin</small>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="book">
+                <div class="addbook">
+                    <h2>Add Book</h2>
+                    <form action="/action_page.php" novalidate>
+                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
+                        <input type="email" id="email" name="email" placeholder="Enter Book Name"><br><br>
+                        <input type="submit" style="border: none;" value="Add" class="submit">
+                    </form>
+                </div>
+
+                <div class="removebook">
+                    <h2>Remove Book</h2>
+                    <form action="/action_page.php" novalidate>
+                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
+                        <input type="submit" style="border: none;" value="Remove" class="submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="down">
+                <div class="addbook">
+                    <h2>Add Book</h2>
+                    <form action="/action_page.php" novalidate>
+                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
+                        <input type="email" id="email" name="email" placeholder="Enter Book Name"><br><br>
+                        <input type="submit" style="border: none;" value="Add" class="submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="down">
+                <div class="removebook">
+                    <h2>Remove Book</h2>
+                    <form action="/action_page.php" novalidate>
+                        <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
+                        <input type="submit" style="border: none;" value="Remove" class="submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="down">
+                <div class="approval">
+                    <div class="section2">
+                        <h2>Approval and Late Fee : </h2>
+                        <form action="/action_page.php" novalidate>
+                            <input type="email" id="email" name="email" placeholder="Enter Book ID" required><br><br>
+                            <input type="email" id="email" name="email" placeholder="Enter Book Name"><br><br>
+                            <input type="submit" style="border: none;" value="Approve" class="submit">
+                        </form>
+                    </div>
+                    
+                    
+                    <div class="section1">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Book Name</th>
+                                    <th>Status</th>
+                                    <th>Late Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div class="table_mobile">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Book Name</th>
+                                <th>Status</th>
+                                <th>Late Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            
+
+        </main>
+        <!-- End of Main Content -->
+
+
+
+    </div>
+<!-- 
+    <script src="orders.js" type = "module"></script> -->
+    <script src="admin.js"></script>
+</body>
+
+</html>
