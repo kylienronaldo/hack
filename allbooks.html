@@ -22,24 +22,30 @@
             </div>
 
             <div class="sidebar">
-                <a href="#">
+                <a href="ui.html">
                     <span class="material-icons-sharp"> dashboard </span>
                     <h3>Discover</h3>
                 </a>
-                <a href="#">
+                <a href="profile.html">
                     <span class="material-icons-sharp"> person_outline </span>
                     <h3>Profile</h3>
                 </a>
 
-                <a href="#" class="active">
+                <a href="allbooks.html" class="active">
                     <span class="material-icons-sharp"> insights </span>
                     <h3>All Books</h3>
                 </a>
-                <a href="#">
+                <!-- <a href="ebooks.html" class="active">
+                    <span class="material-symbols-outlined">
+                        menu_book
+                        </span>
+                    <h3>E-Books</h3>
+                </a> -->
+                <a href="faq.html">
                     <span class="material-icons-sharp"> settings </span>
-                    <h3>Settings</h3>
+                    <h3>FAQ</h3>
                 </a>
-                <a href="#">
+                <a href="logout.html">
                     <span class="material-icons-sharp"> logout </span>
                     <h3>Logout</h3>
                 </a>
@@ -52,9 +58,14 @@
             <div class="search-section">
                 
                 <div class="nav">
-                    <input type="text" placeholder="Search book ID" class="search-input" id = "opt">
-                    <button class="issue" id = "search">Search</button>
-                    <button class="issue" id = "issue">Issue</button>
+                    <div class="nav1"> <input type="text" placeholder="Search book ID" class="search-input" id = "opt"></div>
+                    <div class="nav4">
+                        <div class="nav2"><button class="issue issue2" id = "search">Search</button></div>
+                        <div class="nav3"><button class="issue issue1" id = "issue">Issue</button></div>
+                    </div>
+                    
+                    
+                    
                     <button id="menu-btn">
                         <span class="material-icons-sharp">
                             menu
@@ -76,12 +87,20 @@
                         </div>
                     </div>
     
+                   </div>
+                   <div class="nav4_main">
+                    <div class="nav2_main"><button class="issue issue2" id = "search">Search</button></div>
+                    <div class="nav3_main"><button class="issue issue1" id = "issue">Issue</button></div>
                 </div>
 
             <div class="recent-orders">
                 <h2>All Books</h2>
-                <button class = "subj" id = "physics">Physics</button><button class = "subj" id = "maths">Maths</button><button class = "subj"id = "chemistry">Chemistry</button><button class = "subj" id = "computer">Computer</button>
-                <button class = "subj" id = "electrical">Electrical</button><button class = "subj" id = "others">others</button>
+                <button class = "subj" id = "all">All</button>
+                <button class = "subj" id = "physics">Physics</button>
+                <button class = "subj" id = "maths">Maths</button><button class = "subj"id = "chemistry">Chemistry</button>
+                <button class = "subj" id = "computer">Computer</button>
+                <button class = "subj" id = "electrical">Electrical</button>
+                <button class = "subj" id = "others">Others</button>
                 <table>
                     <thead>
                         <tr>
@@ -94,14 +113,14 @@
                     </thead>
                     <tbody></tbody>
                 </table>
-                <a href="#">Show All</a>
+
             </div>
             <!-- End of Recent Orders -->
 
         </main>
 
-        <script src = "allbooks.js" type = "module"></script>
-        <script src = "admin.js" type = "module"></script>
+       <script src="allbooks.js" type="module"></script>
+        <script src="admin.js"></script>
 </body> 
 
 </html>

@@ -33,7 +33,7 @@
             <h3>Profile</h3>
           </a>
 
-          <a href="allbooks.html" >
+          <a href="allbooks.html">
             <span class="material-icons-sharp"> insights </span>
             <h3>All Books</h3>
           </a>
@@ -50,7 +50,7 @@
       <!-- End of Sidebar Section -->
 
       <!-- Main Content -->
-    
+
       <main>
         <link
           rel="stylesheet"
@@ -58,38 +58,68 @@
         />
 
         <div class="main-content">
-            <div class="main-down">
-                <p class="head1">Is there a limit on borrowing?</p>
-                <p class="head2">Yes, you can borrow up to 2 books per library card.</p>
-            </div>
+          <div class="main-down">
+            <p class="head1">Is there a limit on borrowing?</p>
+            <p class="head2">
+              Yes, you can borrow up to 2 books per library card.
+            </p>
+          </div>
 
-              <div class="main-down">
-                <p class="head1">How can I suggest new books</p>
-                <p class="head2">You can Explore our recommended books section where you will find all our recommended range of books !! </p>
-              </div>
+          <div class="main-down">
+            <p class="head1">How can I suggest new books</p>
+            <p class="head2">
+              You can Explore our recommended books section where you will find
+              all our recommended range of books !!
+            </p>
+          </div>
 
-              <div class="main-down">
-                <p class="head1">How do I borrow books?</p>
-                <p class="head2">Simply login to your account and choose the book you want to borrow. It's that easy!</p>
-              </div>
-              <div class="main-down">
-                <p class="head1">Can I renew my books?</p>
-                <p class="head2">YES! You can easily renew your book online through your account. Never stop reading!</p>
-              </div>
-              <div class="main-down">
-                <p class="head1">Are there late fees?</p>
-                <p class="head2">Unfortunately YES. If you fail to return or re-issue your book within a week then you will have to pay Rs.5 per day after the date of return.</p>
-              </div>
-              <div class="main-down">
-                <p class="head1">What should I do if I encounter technical issues with the online library management system?</p>
-                <p class="head2">If you experience any technical difficulties while using the online library management system, please contact our support team for assistance. You can reach us by phone, email, or in person at the library.</p>
-              </div>
-              <div class="main-down">
-                <p class="head1">Can I access the online library management system from my mobile device?</p>
-                <p class="head2">Yes, the online library management system is mobile-friendly and can be accessed from any device with internet connectivity, including smartphones and tablets. Simply visit our website using your device's web browser to get started.</p>
-              </div>
+          <div class="main-down">
+            <p class="head1">How do I borrow books?</p>
+            <p class="head2">
+              Simply login to your account and choose the book you want to
+              borrow. It's that easy!
+            </p>
+          </div>
+          <div class="main-down">
+            <p class="head1">Can I renew my books?</p>
+            <p class="head2">
+              YES! You can easily renew your book online through your account.
+              Never stop reading!
+            </p>
+          </div>
+          <div class="main-down">
+            <p class="head1">Are there late fees?</p>
+            <p class="head2">
+              Unfortunately YES. If you fail to return or re-issue your book
+              within a week then you will have to pay Rs.5 per day after the
+              date of return.
+            </p>
+          </div>
+          <div class="main-down">
+            <p class="head1">
+              What should I do if I encounter technical issues with the online
+              library management system?
+            </p>
+            <p class="head2">
+              If you experience any technical difficulties while using the
+              online library management system, please contact our support team
+              for assistance. You can reach us by phone, email, or in person at
+              the library.
+            </p>
+          </div>
+          <div class="main-down">
+            <p class="head1">
+              Can I access the online library management system from my mobile
+              device?
+            </p>
+            <p class="head2">
+              Yes, the online library management system is mobile-friendly and
+              can be accessed from any device with internet connectivity,
+              including smartphones and tablets. Simply visit our website using
+              your device's web browser to get started.
+            </p>
+          </div>
         </div>
-
       </main>
       <!-- End of Main Content -->
 
@@ -101,7 +131,7 @@
           </button>
           <div class="dark-mode">
             <span class="material-icons-sharp active"> light_mode </span>
-            
+
             <span class="material-icons-sharp"> dark_mode </span>
           </div>
 
@@ -123,6 +153,43 @@
             <p>E-mail : logiclegion@gmail.com</p>
           </div>
         </div>
+            <div id="ticketContainer" class="main_container">
+              <h2>Submit a Ticket</h2>
+              <form id="ticketForm">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required />
+                <div id="subjectError" class="error-message"></div>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                  <option value="">Select Category</option>
+                  <option value="Technical Issue">Technical Issue</option>
+                  <option value="Course Content">Book Issue</option>
+                  <option value="User Account">User Account</option>
+                  <!-- Add more options as needed -->
+                </select>
+                <div id="categoryError" class="error-message"></div>
+
+                <label for="description">Description:</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  required
+                ></textarea>
+                <div id="descriptionError" class="error-message"></div>
+
+                <label for="priority">Priority:</label>
+                <select id="priority" name="priority" required>
+                  <option value="">Select Priority</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+                <div id="priorityError" class="error-message"></div>
+
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
       </div>
     </div>
   </body>

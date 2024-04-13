@@ -27,6 +27,14 @@ const math = document.getElementById('maths')
 const comp = document.getElementById('computer')
 const elec = document.getElementById('electrical')
 const oth = document.getElementById('others')
+const all = document.getElementById('all')
+
+all.addEventListener('click', ()=>{
+  window.location.href="allbooks.html"
+})
+
+
+
 
 phy.addEventListener('click',()=>{
     get(child(ref(database),'books/'))
