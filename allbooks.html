@@ -32,20 +32,18 @@
                 </a>
 
                 <a href="allbooks.html" class="active">
-                    <span class="material-icons-sharp"> insights </span>
+                    <span class="material-icons-sharp"> book </span>
                     <h3>All Books</h3>
                 </a>
-                <!-- <a href="ebooks.html" class="active">
-                    <span class="material-symbols-outlined">
-                        menu_book
-                        </span>
-                    <h3>E-Books</h3>
-                </a> -->
+                <a href="ebooks.html">
+                    <span class="material-icons-sharp"> menu_book </span>
+                    <h3>E Books</h3>
+                </a>
                 <a href="faq.html">
-                    <span class="material-icons-sharp"> settings </span>
+                    <span class="material-icons-sharp"> quiz </span>
                     <h3>FAQ</h3>
                 </a>
-                <a href="logout.html">
+                <a href="login.html">
                     <span class="material-icons-sharp"> logout </span>
                     <h3>Logout</h3>
                 </a>
@@ -58,14 +56,9 @@
             <div class="search-section">
                 
                 <div class="nav">
-                    <div class="nav1"> <input type="text" placeholder="Search book ID" class="search-input" id = "opt"></div>
-                    <div class="nav4">
-                        <div class="nav2"><button class="issue issue2" id = "search">Search</button></div>
-                        <div class="nav3"><button class="issue issue1" id = "issue">Issue</button></div>
-                    </div>
-                    
-                    
-                    
+                    <input type="text" placeholder="Search book ID" class="search-input" id = "opt">
+                    <button class="issue" id = "search" style="width: 15vh;">Search</button>
+                    <button class="issue" id = "issue" style="width: 15vh;">Issue</button>
                     <button id="menu-btn">
                         <span class="material-icons-sharp">
                             menu
@@ -79,48 +72,32 @@
                             dark_mode
                         </span>
                     </div>
-    
-                    <div class="profile">
-                        <div class="info">
-                            <p>Hey, <b>Vedant</b></p>
-                            <small class="text-muted">Admin</small>
-                        </div>
-                    </div>
-    
-                   </div>
-                   <div class="nav4_main">
-                    <div class="nav2_main"><button class="issue issue2" id = "search">Search</button></div>
-                    <div class="nav3_main"><button class="issue issue1" id = "issue">Issue</button></div>
+
                 </div>
 
             <div class="recent-orders">
                 <h2>All Books</h2>
-                <button class = "subj" id = "all">All</button>
-                <button class = "subj" id = "physics">Physics</button>
-                <button class = "subj" id = "maths">Maths</button><button class = "subj"id = "chemistry">Chemistry</button>
-                <button class = "subj" id = "computer">Computer</button>
-                <button class = "subj" id = "electrical">Electrical</button>
-                <button class = "subj" id = "others">Others</button>
+                <button class = "subj" id = "physics">Physics</button><button class = "subj" id = "maths">Maths</button><button class = "subj"id = "chemistry">Chemistry</button><button class = "subj" id = "computer">Computer</button>
+                <button class = "subj" id = "electrical">Electrical</button><button class = "subj" id = "others">others</button>
                 <table>
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Books Name</th>
                             <th>Category</th>
-                            <th>Status</th>
+                            <th>Qty</th>
+                            
                             
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
-
             </div>
-            <!-- End of Recent Orders -->
 
         </main>
 
-       <script src="allbooks.js" type="module"></script>
-        <script src="admin.js"></script>
+        <script src = "allbooks.js" type = "module"></script>
+        <script src = "admin.js" type = "module"></script>
 </body> 
 
 </html>

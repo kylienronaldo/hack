@@ -34,11 +34,15 @@
           </a>
 
           <a href="allbooks.html" >
-            <span class="material-icons-sharp"> insights </span>
+            <span class="material-icons-sharp"> book </span>
             <h3>All Books</h3>
           </a>
+          <a href="ebooks.html" >
+            <span class="material-icons-sharp"> menu_book </span>
+            <h3>E Books</h3>
+          </a>
           <a href="faq.html">
-            <span class="material-icons-sharp"> settings </span>
+            <span class="material-icons-sharp"> quiz </span>
             <h3>FAQ</h3>
           </a>
           <a href="logout.html">
@@ -59,7 +63,6 @@
         <div class="main-content">
             <div class="main-down">
                 <div class="head"><h2>Recommended Books</h2>
-                  <button>See All ></button>
                 </div>
                 <div class="image-container" id="imageContainer">
                   <div class="scrollable-wrapper">
@@ -77,10 +80,10 @@
               <div class="main-down2">
                 <div><h2>Category</h2></div>
                 <div class="category-buttons">
-                  <button>All</button>
-                  <button>Physics</button>
-                  <button>Chemistry</button>
-                  <button>Physics</button>
+                  <a href="allbooks.html"><button>All</button></a>
+                  <a href="allbooks.html"><button>Physics</button></a>
+                  <a href="allbooks.html"><button>Chemistry</button></a>
+                  <a href="allbooks.html"><button>Physics</button></a>
                 </div>
                 <br />
                 <div class="image-container" id="imageContainer">
@@ -88,10 +91,10 @@
                     <div class="scrollable-wrapper">
                       <div class="scrollable-content" id="scrollableContent">
                         <img class="b1" src="ui-books/book5.jpg" alt="Image 1" id="book1" />
-                        <img src="ui-books/book1.jpg" alt="Image 2" id="book2" />
-                        <img src="ui-books/book2.jpg" alt="Image 3" id="book3" />
-                        <img src="ui-books/book3.jpg" alt="Image 1" id="book1" />
-                        <img src="ui-books/book4.jpg" alt="Image 2" id="book2" />
+                        <img src="ui-books/book7.jpg" alt="Image 2" id="book2" />
+                        <img src="ui-books/book8.jpg" alt="Image 3" id="book3" />
+                        <img src="ui-books/book9.jpg" alt="Image 1" id="book1" />
+                        <img src="ui-books/book.jpg" alt="Image 2" id="book2" />
                       </div>
                     </div>
                   </div>
@@ -115,7 +118,7 @@
 
           <div class="profile">
             <div class="info">
-              <p>Hey, <b>User</b></p>
+              <p>Hey, <b id="name3">User</b></p>
               <small class="text-muted">User</small>
             </div>
           </div>
@@ -124,15 +127,15 @@
 
         <div class="user-profile">
           <div class="logo">
-            <h2>Engineering</h2>
-            <p>An Illustrated History</p>
+            <h2>New E Book</h2>
+            <p>Probability</p>
             <br />
-            <img src="ui-books/book1.jpg" />
-            <p>AUTHOR : K D Joshi</p>
+            <img src="newebook.jpg" style="border-radius: 20px;" />
+            <p>AUTHOR : Shawmaker</p>
             <br />
             <p>Includes : Applied Discrete Strcuures`</p>
             <br />
-            <button>Issue</button>
+            <a href="ebooks.html"><button style="border: 1px solid black;">Issue E Book</button></a>
           </div>
         </div>
       </div>
@@ -140,5 +143,6 @@
   </body>
 
   <script src="admin.js"></script>
+  <script src="ui.js" type="module"></script>
 
 </html>

@@ -575,3 +575,19 @@ main .search{
       flex-direction: column;
     }
   }
+
+  
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.3);
+  background-color: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+button:hover {
+  transform: translateY(-1px);
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}

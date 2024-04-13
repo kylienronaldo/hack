@@ -27,14 +27,6 @@ const math = document.getElementById('maths')
 const comp = document.getElementById('computer')
 const elec = document.getElementById('electrical')
 const oth = document.getElementById('others')
-const all = document.getElementById('all')
-
-all.addEventListener('click', ()=>{
-  window.location.href="allbooks.html"
-})
-
-
-
 
 phy.addEventListener('click',()=>{
     get(child(ref(database),'books/'))
@@ -51,7 +43,7 @@ phy.addEventListener('click',()=>{
               <td>${order.id}</td>
               <td>${order.name}</td>
               <td>${order.cat}</td>
-              <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+              <td>${order.Qty}</td>
               
               
           `;
@@ -80,7 +72,7 @@ chem.addEventListener('click',()=>{
               <td>${order.id}</td>
               <td>${order.name}</td>
               <td>${order.cat}</td>
-              <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+              
               
               
           `;
@@ -109,7 +101,8 @@ math.addEventListener('click',()=>{
               <td>${order.id}</td>
               <td>${order.name}</td>
               <td>${order.cat}</td>
-              <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+              <td>${order.Qty}</td>
+              
               
               
           `;
@@ -138,7 +131,8 @@ comp.addEventListener('click',()=>{
               <td>${order.id}</td>
               <td>${order.name}</td>
               <td>${order.cat}</td>
-              <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+              <td>${order.Qty}</td>
+              
               
               
           `;
@@ -167,7 +161,8 @@ elec.addEventListener('click',()=>{
               <td>${order.id}</td>
               <td>${order.name}</td>
               <td>${order.cat}</td>
-              <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+              <td>${order.Qty}</td>
+              
               
               
           `;
@@ -196,7 +191,8 @@ oth.addEventListener('click',()=>{
               <td>${order.id}</td>
               <td>${order.name}</td>
               <td>${order.cat}</td>
-              <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+              <td>${order.Qty}</td>
+             
               
               
           `;
@@ -245,7 +241,8 @@ get(child(ref(database),'books/'))
               <td>${order.id}</td>
               <td>${order.name}</td>
               <td>${order.cat}</td>
-              <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+              <td>${order.Qty}</td>
+              
               
               
           `;
@@ -281,13 +278,13 @@ function issueBook(){
                 get(bookRef).then((snapshot) =>{
                     const bookData = snapshot.val();
                     const bookStatus = bookData.status;
-                    if(bookStatus == 'available'){
+                    if(bookData.Qty>0){
                         update(userRef, { book1:opt}).then(() => {
                             
                             }).catch((error) => {
                             console.error('Error issuing book:', error);
                             });
-                        update(bookRef, { doi: Date.now(),dor : Date.now() + 86400000 * 7,user: username, status: 'issued' }).then(() => {
+                        update(bookRef, { doi: Date.now(),dor : Date.now() + 86400000 * 7,user: username, status: 'issued' ,Qty:bookData.Qty-1}).then(() => {
                         alert('Book issued successfully.');
                         }).catch((error) => {
                         console.error('Error issuing book:', error);
@@ -302,19 +299,19 @@ function issueBook(){
                 get(bookRef).then((snapshot) =>{
                     const bookData = snapshot.val();
                     const bookStatus = bookData.status;
-                    if(bookStatus == 'available'){
+                    if(bookData.Qty>0){
                         update(userRef, { book2:opt}).then(() => {
                             
                             }).catch((error) => {
                             console.error('Error issuing book:', error);
                             });
-                        update(bookRef, { doi: Date.now(),dor : Date.now() + 86400000 * 7,user: username, status: 'issued' }).then(() => {
+                        update(bookRef, { doi: Date.now(),dor : Date.now() + 86400000 * 7,user: username, status: 'issued',Qty:bookData.Qty-1 }).then(() => {
                         alert('Book issued successfully.');
                         }).catch((error) => {
                         console.error('Error issuing book:', error);
                 });}
                     else{
-                        alert('book already issued')
+                        alert('book not available')
                     }
             })
             }
@@ -342,7 +339,8 @@ function issueBook(){
                         <td>${order.id}</td>
                         <td>${order.name}</td>
                         <td>${order.cat}</td>
-                        <td class="${order.status === 'Due' ? 'danger' : order.status === 'available' ? 'success' : 'primary'}">${order.status}</td>
+                        <td>${order.Qty}</td>
+                        
                     `;
                     tr.innerHTML = trContent;
                     tr.style.background = 'rgb(218,246,148)';
