@@ -57,7 +57,12 @@ body{
 a{
     color: var(--color-dark);
 }
-
+/* 
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+} */
 
 h1{
     font-weight: 800;
@@ -280,10 +285,6 @@ main .recent-orders a{
     color: var(--color-primary);
 }
 
-.right-section{
-    margin-top: 1.4rem;
-}
-
 .right-section .nav{
     display: flex;
     justify-content: end;
@@ -300,7 +301,7 @@ main .recent-orders a{
     justify-content: space-between;
     align-items: center;
     height: 1.6rem;
-    width: 4.8rem;
+    width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius-1);
 }
@@ -320,6 +321,7 @@ main .recent-orders a{
     border-radius: var(--border-radius-1);
 }
 
+
 .right-section .nav .profile{
     display: flex;
     gap: 2rem;
@@ -333,29 +335,35 @@ main .recent-orders a{
     overflow: hidden;
 }
 
+
+
+.input{
+  padding: 10px;
+  border-radius: 2px solid black;
+}
+
+image::on-click .user-profile{
+  display: flex;
+}
+
 .right-section .user-profile{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 1rem;
+    display: none;
+
+
+
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 50%;
 }
 
 .right-section .user-profile:hover{
     box-shadow: none;
 }
 
-.right-section .user-profile img{
-    width: 11rem;
-    height: auto;
-    margin-bottom: 0.8rem;
-    border-radius: var(--border-radius-1);
-}
 
 .right-section .user-profile h2{
     margin-bottom: 0.2rem;
@@ -366,14 +374,20 @@ main .recent-orders a{
     border-radius: 10px;
 }
 
+
+
+/*...............................................*/
+
 main .search{
     padding:10px;
     border-radius: 10px;
 }
 
+
+
 .image-container {
-    width: 850px; 
-    height:200px; 
+    width: 800px; 
+    height:90vh; 
   }
 
   .head{
@@ -389,18 +403,22 @@ main .search{
     background: var(--color-light);
     cursor: pointer;
   }
-
+  
+  .scrollable-content img {
+    width: 10vw; 
+    height: 30vh;
+    margin-top: .5rem;
+    margin-right: 10px; 
+    border-radius: var(--card-border-radius);
+  }
+  
   .main-content{
-    margin-top: 4%;
     display: flex;
     flex-direction: column;
-    height: auto;
-    max-height: 100%;
   }
 
   .main-down{
-    height: auto;
-    margin-top: 1rem;
+    height: 79vh;
     background-color: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -408,229 +426,139 @@ main .search{
     cursor: pointer;
     transition: all 0.3s ease;
     flex-grow: 1;
-    align-content: center;
-}
-
-  .main-down p{
-    margin-left: 30px;
-}
-  
-  .head1{
-    color: black;
-    font-size: 30px;
-    font-weight: 600;
   }
-
-  .head2{
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-  }
-
-  /* .container {
-    display: grid;
-    grid-template-columns: 12rem auto 23rem;
-    grid-template-rows: auto 1fr auto;
-    height: 100vh;
-    width: 96%;
-    margin: 0 auto;
-    gap: 1.8rem;
-  }
-  
-  aside {
-    grid-row: 1 / 4;
- }
-  
-  main {
-    overflow-y: auto;
-    grid-row: 2; 
- }
-  
-  .right-section {
-    grid-row: 3;}
-
-
-
-
-  .container {
-    display: grid;
-    grid-template-columns: 12rem 1fr 23rem; 
-    grid-template-rows: auto 1fr;
-    height: 100vh;
-    width: 96%;
-    margin: 0 auto;
-    gap: 1.8rem;
-  }
-  
-  aside {
-    grid-row: 1 / 3;
-  }
-  
-  main {
-    overflow-y: auto;
-  }
-  
-  .right-section {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 23rem; 
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
-   
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  .right-section {
-    margin-right: 10px; 
-} */
-
-
-  .right-section .dark-mode span {
-    width: 45%; 
-  }
-  
-  .right-section .dark-mode span.active {
-    width: 55%; 
-  }
-
+ 
   @media screen and (max-width: 768px) {
-    .container{
-        width: 100%;
-        grid-template-columns: 1fr;
-        padding: 0 var(--padding-1);
-        display: flex;
-        flex-direction: column;
+    .container {
+      width: 100%;
+      grid-template-columns: 1fr;
+      padding: 0 var(--padding-1);
+      display: flex;
+      flex-direction: column-reverse;
     }
-
-    aside{
-        position: fixed;
-        background-color: var(--color-white);
-        width: 15rem;
-        margin-bottom: 112%;
-        z-index: 3;
-        box-shadow: 1rem 3rem 4rem var(--color-light);
-        height: 100vh;
-        left: -100%;
-        display: none;
-        animation: showMenu 0.4s ease forwards;
+  
+    aside {
+      position: fixed;
+      background-color: var(--color-white);
+      width: 15rem;
+      margin-bottom: 112%;
+      z-index: 3;
+      box-shadow: 1rem 3rem 4rem var(--color-light);
+      height: 100vh;
+      left: -100%;
+      display: none;
+      animation: showMenu 0.4s ease forwards;
     }
-
+  
     @keyframes showMenu {
-       to{
+      to {
         left: 0;
-       } 
+      }
+    }
+  
+    aside .logo {
+      margin-left: 1rem;
+    }
+  
+    aside .logo h2 {
+      display: inline;
+    }
+  
+    aside .sidebar h3 {
+      display: inline;
+    }
+  
+    aside .sidebar a {
+      width: 100%;
+      height: 3.4rem;
+    }
+  
+    aside .sidebar a:last-child {
+      position: absolute;
+      bottom: 5rem;
+    }
+  
+    aside .toggle .close {
+      display: inline-block;
+      cursor: pointer;
+    }
+  
+    .right-section {
+      width: 90%;
+      margin: 0 auto 4rem;
+    }
+  
+    .right-section .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      align-items: center;
+      background-color: var(--color-white);
+      padding: 0 var(--padding-1);
+      height: 4.6rem;
+      width: 90vw;
+      z-index: 2;
+      box-shadow: 0 1rem 1rem var(--color-light);
+      margin: 0;
+    }
+  
+    .right-section .nav .dark-mode {
+      width: 4.4rem;
+      position: absolute;
+      left: 66%;
+    }
+  
+    .right-section .profile .info {
+      display: none;
+    }
+  
+    .right-section .nav button {
+      display: inline-block;
+      background-color: transparent;
+      cursor: pointer;
+      color: var(--color-dark);
+      position: absolute;
+      left: 1rem;
+    }
+  
+    .right-section .nav button span {
+      font-size: 2rem;
+    }
+  
+    .details {
+      width: 94%;
+    }
+  
+    
+  
+    .main-down .recent-orders {
+      display: flex;
+      flex-direction: column;
     }
 
-    aside .logo{
-        margin-left: 1rem;
+    .scrollable-content{
+      display: flex;
+      flex-direction: column;
     }
 
-    aside .logo h2{
-        display: inline;
-    }
 
-    aside .sidebar h3{
-        display: inline;
-    }
-
-    aside .sidebar a{
-        width: 100%;
-        height: 3.4rem;
-    }
-
-    aside .sidebar a:last-child{
-        position: absolute;
-        bottom: 5rem;
-    }
-
-    aside .toggle .close{
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .right-section{
-        width: 90%;
-        margin: 0 auto 4rem;
-    }
-
-    .right-section .nav{
-        position: fixed;
-        top: 0;
-        left: 0;
-        align-items: center;
-        background-color: var(--color-white); 
-        padding: 0 var(--padding-1);
-        height: 4.6rem;
-        width: 430px;
-        z-index: 2;
-        box-shadow: 0 1rem 1rem var(--color-light);
-        margin: 0;
-        
-    }
-
-    .right-section .nav .dark-mode{
-        width: 4.4rem;
-        position: absolute;
-        left: 66%;
-    }
-
-    .right-section .profile .info{
-        display: none;
-    }
-
-    .right-section .nav button{
-        display: inline-block;
-        background-color: transparent;
-        cursor: pointer;
-        color: var(--color-dark);
-        position: absolute;
-        left: 1rem;
-    }
-
-    .right-section .nav button span{
-        font-size: 2rem;
-    } 
-
-    /*.details{
-        width: 94%;
+    .scrollable-content img {
+      width: 150px; 
+      height: auto;
+      margin-top: .5rem;
+      margin-right: 10px; 
+      border-radius: var(--card-border-radius);
     }
 
     .main-down{
-        width: 94%;
+      
+      width: 70vw;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-left: 50px;
+      height: 250vh;
+      margin-bottom: 10px;
     }
-
-    .main-down .recent-orders {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .user-profile{
-        display: none;
-    }
-
-    .logo{
-        display: none;
-    }
-  } */
-  
-  .user-profile{
-    margin-top: 40%;
-}
-
-.details{
-    width: 94%;
-}
-
-.main-down{
-    width: 94%;
-}
-
-.main-down .recent-orders {
-    display: flex;
-    flex-direction: column;
-
-}
+    
   }
